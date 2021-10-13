@@ -57,10 +57,8 @@
                             <td>ORIGEN</td><td>DESTINO</td><td>AEROLINEA</td><td>HORA_SALIDA</td><td>FECHA_SALIDA</td><td>PRECIO</td>
 
                         </tr>
-                        
-                        <%      
-                           
-                            if ((boolean)request.getAttribute("filtro") !=true ||request.getAttribute("filtro") !=null) {
+
+                        <%                            if ((boolean) request.getAttribute("filtro") != true || request.getAttribute("filtro") != null) {
                                 lista = (List<Vuelo>) request.getAttribute("filtro");
 
                                 for (Vuelo v : lista) {
@@ -76,8 +74,7 @@
                         </tr>
                         <%
                                 }
-                            }
-else {
+                            } else {
 
                                 out.print(" <div class=\"alert alert-danger\" role=\"alert\"> Usuario no valido </div>");
                             }
